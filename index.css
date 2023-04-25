@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Love+Light&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #0b1622;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.word-container {
+	margin-bottom: 50px;
+}
+.word-container .word {
+	color: #f20044;
+	font-size: 60px;
+	text-shadow: 10px 10px 90px #f20044;
+	font-family: 'Love Light', cursive;
+}
+
+.heart {
+	height: 70px;
+	width: 70px;
+	background-color: #f20044;
+	position: relative;
+	box-shadow: 10px 10px 90px #f20044;
+	animation: animHeart 0.6s linear infinite;
+}
+.Names {
+	color: #ffffff;
+	font-size: 60px;
+	margin-top: 50px;
+	text-align: center;
+	letter-spacing: 5px;
+	line-height: 65px;
+	font-family: 'Pacifico', cursive;
+}
+
+@keyframes animHeart {
+	0% {
+		transform: rotate(-45deg) scale(1.07);
+	}
+	80% {
+		transform: rotate(-45deg) scale(1);
+	}
+	100% {
+		transform: rotate(-45deg) scale(0.8);
+	}
+}
+
+.heart::before {
+	content: '';
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	background-color: #f20044;
+	box-shadow: -10px 10px 90px #f20044;
+	top: -50%;
+	border-radius: 50%;
+}
+
+.heart::after {
+	content: '';
+	position: absolute;
+	height: 70px;
+	width: 70px;
+	background-color: #f20044;
+	box-shadow: -10px 10px 90px #f20044;
+	right: -50%;
+	border-radius: 50%;
+}
